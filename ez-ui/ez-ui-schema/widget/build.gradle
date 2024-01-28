@@ -1,0 +1,31 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+apply plugin: 'app.cash.redwood.generator.widget'
+
+archivesBaseName = 'schema-widget'
+
+kotlin {
+  iosArm64()
+  iosX64()
+  iosSimulatorArm64()
+
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+  jvm()
+
+  sourceSets {
+    commonMain {
+      dependencies {
+        api project(":ez-ui-api")
+      }
+    }
+  }
+}
+
+redwoodSchema {
+  source = project(":ez-ui-schema")
+  type = 'com.redwood.ui.schema.Schema'
+}

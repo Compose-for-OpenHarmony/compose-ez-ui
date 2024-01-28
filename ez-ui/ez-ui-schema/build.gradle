@@ -1,0 +1,11 @@
+apply plugin: 'org.jetbrains.kotlin.jvm'
+apply plugin: 'app.cash.redwood.schema'
+
+dependencies {
+  api project(':ez-ui-api')
+}
+
+
+redwoodSchema {
+  type = 'com.redwood.ui.schema.Schema'
+}

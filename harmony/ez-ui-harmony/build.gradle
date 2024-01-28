@@ -1,0 +1,22 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+
+kotlin {
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+
+  sourceSets {
+    jsMain {
+      dependencies {
+        api project(":ez-ui-api")
+        api project(":ez-ui-schema:compose")
+        api project(":ez-ui-schema:widget")
+        api project(":ez-ui-schema:modifier")
+        api project(":harmony-dom")
+      }
+    }
+  }
+}

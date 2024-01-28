@@ -1,0 +1,37 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+apply plugin: 'app.cash.redwood.generator.modifiers'
+
+kotlin {
+  iosArm64()
+  iosX64()
+  iosSimulatorArm64()
+
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+  jvm()
+
+  // Ensure our codegen correctly works in explicit API mode.
+  explicitApi()
+
+  targets.all {
+    compilations.all {
+      kotlinOptions {
+
+        freeCompilerArgs += [
+          // Ensure our codegen can handle the latest language semantics.
+          // https://kotlinlang.org/docs/compiler-reference.html#progressive
+          '-progressive'
+        ]
+      }
+    }
+  }
+}
+
+redwoodSchema {
+  source = project(":ez-ui-schema")
+  type = 'com.redwood.ui.schema.Schema'
+}

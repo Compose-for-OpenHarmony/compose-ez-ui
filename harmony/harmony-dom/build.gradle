@@ -1,0 +1,17 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+
+kotlin {
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+
+  sourceSets {
+    commonMain {
+      dependencies {
+      }
+    }
+  }
+}

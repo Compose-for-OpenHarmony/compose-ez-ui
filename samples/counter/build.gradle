@@ -1,0 +1,24 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+apply plugin: 'app.cash.redwood'
+
+kotlin {
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+
+  sourceSets {
+    commonMain {
+      dependencies {
+        implementation libs.kotlinx.coroutines.core
+      }
+    }
+    jsMain {
+      dependencies {
+        implementation project(":redwood-harmony")
+      }
+    }
+  }
+}

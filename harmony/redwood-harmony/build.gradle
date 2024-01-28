@@ -1,0 +1,24 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+apply plugin: 'app.cash.redwood'
+
+kotlin {
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+
+  sourceSets {
+    commonMain {
+      dependencies {
+        implementation project(":ez-ui-schema:widget")
+        api project(":ez-ui-schema:compose")
+        api project(":ez-ui-schema:modifier")
+        implementation project(":ez-ui-harmony")
+        api project(":harmony-dom")
+        implementation libs.kotlinx.coroutines.core
+      }
+    }
+  }
+}

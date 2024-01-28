@@ -1,0 +1,18 @@
+buildscript {
+  dependencies {
+    classpath "app.cash.redwood:redwood-gradle-plugin:0.7.0"
+    classpath libs.kotlin.gradlePlugin
+  }
+  repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+  }
+}
+
+allprojects {
+  // TODO remove after update to redwood 0.8.0
+  plugins.withId('app.cash.redwood') {
+    extensions.getByName("redwood").kotlinCompilerPlugin.set("1.5.4")
+  }
+}

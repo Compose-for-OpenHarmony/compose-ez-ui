@@ -1,0 +1,28 @@
+apply plugin: 'org.jetbrains.kotlin.multiplatform'
+
+
+kotlin {
+  iosArm64()
+  iosX64()
+  iosSimulatorArm64()
+
+  js {
+    generateTypeScriptDefinitions()
+    useEsModules()
+    nodejs()
+    binaries.executable()
+  }
+  jvm()
+
+  sourceSets {
+    commonMain {
+      dependencies {
+        api libs.redwood.runtime
+        api libs.redwood.widget
+        api libs.redwood.widget
+        api libs.jetbrains.compose.runtime
+//        api libs.kotlinx.serialization.core
+      }
+    }
+  }
+}

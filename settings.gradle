@@ -1,0 +1,42 @@
+pluginManagement {
+
+  repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+  }
+}
+
+dependencyResolutionManagement {
+  repositories {
+    mavenCentral()
+    google()
+  }
+}
+
+rootProject.name = 'compose-ez-ui'
+
+include ':ez-ui-api'
+project(':ez-ui-api').projectDir = new File(rootDir, "ez-ui/ez-ui-api")
+
+include ':ez-ui-schema'
+project(':ez-ui-schema').projectDir = new File(rootDir, "ez-ui/ez-ui-schema")
+
+include ':ez-ui-schema:compose'
+include ':ez-ui-schema:widget'
+include ':ez-ui-schema:modifier'
+
+include ':harmony-dom'
+project(':harmony-dom').projectDir = new File(rootDir, "harmony/harmony-dom")
+
+include ':harmony-plugin'
+project(':harmony-plugin').projectDir = new File(rootDir, "harmony/harmony-plugin")
+
+include ':ez-ui-harmony'
+project(':ez-ui-harmony').projectDir = new File(rootDir, "harmony/ez-ui-harmony")
+
+include ':redwood-harmony'
+project(':redwood-harmony').projectDir = new File(rootDir, "harmony/redwood-harmony")
+
+include ':sample-counter'
+project(':sample-counter').projectDir = new File(rootDir, "samples/counter")
