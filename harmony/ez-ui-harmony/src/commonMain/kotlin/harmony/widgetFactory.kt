@@ -2,6 +2,7 @@ package harmony
 
 import com.redwood.ui.schema.widget.Button
 import com.redwood.ui.schema.widget.Column
+import com.redwood.ui.schema.widget.Image
 import com.redwood.ui.schema.widget.Row
 import com.redwood.ui.schema.widget.SchemaWidgetFactory
 import com.redwood.ui.schema.widget.Text
@@ -27,5 +28,9 @@ public class HarmonyWidgetFactory: SchemaWidgetFactory<BaseNode> {
 
   override fun Button(): Button<BaseNode> {
     return HarmonyButton()
+  }
+
+  override fun Image(): Image<BaseNode> {
+    return HarmonyImage()
   }
 }

@@ -3,22 +3,19 @@ package com.redwood.ui.schema
 import app.cash.redwood.schema.Default
 import app.cash.redwood.schema.Property
 import app.cash.redwood.schema.Widget
-import app.cash.redwood.ui.Dp
-import app.cash.redwood.ui.dp
-import com.redwood.ui.schema.api.Color
-import com.redwood.ui.schema.api.FontStyle
 import com.redwood.ui.schema.api.Length
 import com.redwood.ui.schema.api.Padding
 
 /**
  * author: wulinpeng
- * date: 2024/1/28
+ * date: 2024/1/29
  * desc:
  */
-@Widget(2)
-data class Text(
+@Widget(5)
+public data class Image(
+
   @Property(1)
-  val text: String?,
+  val url: String,
 
   @Property(2)
   @Default("Length.Wrap")
@@ -33,18 +30,6 @@ data class Text(
   val padding: Padding,
 
   @Property(5)
-  @Default("null")
-  val fontStyle: FontStyle? = null,
-
-  @Property(6)
-  @Default("Dp(15.0)")
-  val fontSize: Dp = 15.dp,
-
-  @Property(7)
-  @Default("Color.Black")
-  val fontColor: Color = Color.Black,
-
-  @Property(8)
-  @Default("null")
-  val maxLines: Int? = null,
+  @Default("false")
+  val circle: Boolean,
 )

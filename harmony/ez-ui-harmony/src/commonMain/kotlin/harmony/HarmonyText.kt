@@ -1,6 +1,9 @@
 package harmony
 
 import app.cash.redwood.Modifier
+import app.cash.redwood.ui.Dp
+import app.cash.redwood.ui.toPlatformDp
+import com.redwood.ui.schema.api.Color
 import com.redwood.ui.schema.api.FontStyle
 import com.redwood.ui.schema.api.Length
 import com.redwood.ui.schema.api.Padding
@@ -37,6 +40,20 @@ public class HarmonyText: Text<BaseNode> {
       FontStyle.Normal -> innerNode.setFontStyle(harmony.dom.OhFontStyle.Normal)
       FontStyle.Italic -> innerNode.setFontStyle(harmony.dom.OhFontStyle.Italic)
       else -> {}
+    }
+  }
+
+  override fun fontSize(fontSize: Dp) {
+    innerNode.setFontSize(fontSize.toPlatformDp())
+  }
+
+  override fun fontColor(fontColor: Color) {
+    innerNode.setFontColor(fontColor.value)
+  }
+
+  override fun maxLines(maxLines: Int?) {
+    maxLines?.apply {
+      innerNode.setMaxLines(this)
     }
   }
 
