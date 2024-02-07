@@ -7,8 +7,10 @@ import com.redwood.ui.schema.api.Color
 import com.redwood.ui.schema.api.FontStyle
 import com.redwood.ui.schema.api.Length
 import com.redwood.ui.schema.api.Padding
+import com.redwood.ui.schema.api.TextSpan
 import com.redwood.ui.schema.widget.Text
 import harmony.dom.BaseNode
+import harmony.dom.OhTextSpan
 import harmony.dom.TextNode
 
 /**
@@ -55,6 +57,21 @@ public class HarmonyText: Text<BaseNode> {
     maxLines?.apply {
       innerNode.setMaxLines(this)
     }
+  }
+
+  override fun spans(spans: List<TextSpan>?) {
+    innerNode.setSpans(spans?.map {
+      OhTextSpan().apply {
+        startIndex = it.startIndex
+        endIndex = it.endIndex
+        fontColor = it.fontColor.value
+        fontSize = it.fontSize.toPlatformDp()
+        fontStyle = when(it.fontStyle) {
+          FontStyle.Normal -> harmony.dom.OhFontStyle.Normal
+          FontStyle.Italic -> harmony.dom.OhFontStyle.Italic
+        }
+      }
+    }?.toTypedArray() ?: emptyArray())
   }
 
   override val value: BaseNode

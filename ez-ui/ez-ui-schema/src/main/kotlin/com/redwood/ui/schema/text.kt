@@ -9,6 +9,7 @@ import com.redwood.ui.schema.api.Color
 import com.redwood.ui.schema.api.FontStyle
 import com.redwood.ui.schema.api.Length
 import com.redwood.ui.schema.api.Padding
+import com.redwood.ui.schema.api.TextSpan
 
 /**
  * author: wulinpeng
@@ -47,4 +48,8 @@ data class Text(
   @Property(8)
   @Default("null")
   val maxLines: Int? = null,
+
+  @Property(9)
+  @Default("null")
+  val spans: List<TextSpan>? = null,
 )
