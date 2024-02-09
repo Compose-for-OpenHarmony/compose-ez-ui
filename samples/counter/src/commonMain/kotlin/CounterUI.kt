@@ -9,6 +9,7 @@ import com.redwood.ui.schema.api.Color
 import com.redwood.ui.schema.api.FontStyle
 import com.redwood.ui.schema.api.Length
 import com.redwood.ui.schema.api.Padding
+import com.redwood.ui.schema.api.TextSpan
 import com.redwood.ui.schema.compose.Button
 import com.redwood.ui.schema.compose.Column
 import com.redwood.ui.schema.compose.Image
@@ -49,6 +50,10 @@ fun Counter(value: Int = 0) {
         fontStyle = fontStyle,
         fontColor = Color.Blue,
         fontSize = 30.dp,
+        spans = listOf(
+          TextSpan(0, 4, Color.Blue, 40.dp, FontStyle.Italic),
+          TextSpan(7, 7, Color.Red, 50.dp, FontStyle.Normal)
+        ),
         modifier = Modifier.weight(1f))
     }
   }
