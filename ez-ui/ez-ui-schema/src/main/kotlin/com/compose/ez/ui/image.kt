@@ -1,10 +1,10 @@
-package com.redwood.ui.schema
+package com.compose.ez.ui
 
 import app.cash.redwood.schema.Default
 import app.cash.redwood.schema.Property
 import app.cash.redwood.schema.Widget
-import com.redwood.ui.schema.api.Length
-import com.redwood.ui.schema.api.Padding
+import com.compose.ez.ui.api.Length
+import com.compose.ez.ui.api.Padding
 
 /**
  * author: wulinpeng
@@ -14,22 +14,22 @@ import com.redwood.ui.schema.api.Padding
 @Widget(5)
 public data class Image(
 
-  @Property(1)
+    @Property(1)
   val url: String,
 
-  @Property(2)
+    @Property(2)
   @Default("Length.Wrap")
   val width: Length,
 
-  @Property(3)
+    @Property(3)
   @Default("Length.Wrap")
   val height: Length,
 
-  @Property(4)
+    @Property(4)
   @Default("Padding.Zero")
   val padding: Padding,
 
-  @Property(5)
+    @Property(5)
   @Default("false")
   val circle: Boolean,
 )

@@ -1,8 +1,8 @@
 package harmony
 
 import app.cash.redwood.ui.toPlatformDp
-import com.redwood.ui.schema.api.Length
-import com.redwood.ui.schema.api.Padding
+import com.compose.ez.ui.api.Length
+import com.compose.ez.ui.api.Padding
 import harmony.dom.BaseNode
 
 /**

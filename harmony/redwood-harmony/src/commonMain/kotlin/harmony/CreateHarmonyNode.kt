@@ -3,8 +3,7 @@ package harmony
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MonotonicFrameClock
 import app.cash.redwood.compose.RedwoodComposition
-import harmony.HarmonyWidgetFactory
-import com.redwood.ui.schema.widget.SchemaWidgetFactories
+import com.compose.ez.ui.widget.SchemaWidgetFactories
 import harmony.dom.BaseNode
 import harmony.dom.ColumnNode
 import kotlin.coroutines.resume

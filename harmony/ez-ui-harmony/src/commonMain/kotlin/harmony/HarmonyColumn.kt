@@ -3,10 +3,10 @@ package harmony
 import app.cash.redwood.Modifier
 import app.cash.redwood.widget.ChangeListener
 import app.cash.redwood.widget.Widget
-import com.redwood.ui.schema.api.Length
-import com.redwood.ui.schema.api.Padding
-import com.redwood.ui.schema.modifier.Weight
-import com.redwood.ui.schema.widget.Column
+import com.compose.ez.ui.api.Length
+import com.compose.ez.ui.api.Padding
+import com.compose.ez.ui.modifier.Weight
+import com.compose.ez.ui.widget.Column
 import harmony.dom.BaseNode
 import harmony.dom.ColumnNode
 

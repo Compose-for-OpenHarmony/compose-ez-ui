@@ -1,4 +1,4 @@
-package com.redwood.ui.schema.api
+package com.compose.ez.ui.api
 
 import app.cash.redwood.ui.Dp
 import app.cash.redwood.ui.dp

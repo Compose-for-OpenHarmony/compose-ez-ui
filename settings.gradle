@@ -43,3 +43,6 @@ project(':redwood-harmony').projectDir = new File(rootDir, "harmony/redwood-harm
 
 include ':sample-counter'
 project(':sample-counter').projectDir = new File(rootDir, "samples/counter")
+
+include ':sample-weibo'
+project(':sample-weibo').projectDir = new File(rootDir, "samples/weibo")

@@ -1,9 +1,9 @@
 package harmony
 
 import app.cash.redwood.Modifier
-import com.redwood.ui.schema.api.Length
-import com.redwood.ui.schema.api.Padding
-import com.redwood.ui.schema.widget.Image
+import com.compose.ez.ui.api.Length
+import com.compose.ez.ui.api.Padding
+import com.compose.ez.ui.widget.Image
 import harmony.dom.BaseNode
 import harmony.dom.ImageNode
 

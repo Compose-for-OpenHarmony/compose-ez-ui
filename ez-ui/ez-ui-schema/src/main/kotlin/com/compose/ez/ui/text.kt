@@ -1,15 +1,16 @@
-package com.redwood.ui.schema
+package com.compose.ez.ui
 
 import app.cash.redwood.schema.Default
 import app.cash.redwood.schema.Property
 import app.cash.redwood.schema.Widget
 import app.cash.redwood.ui.Dp
 import app.cash.redwood.ui.dp
-import com.redwood.ui.schema.api.Color
-import com.redwood.ui.schema.api.FontStyle
-import com.redwood.ui.schema.api.Length
-import com.redwood.ui.schema.api.Padding
-import com.redwood.ui.schema.api.TextSpan
+import com.compose.ez.ui.api.Color
+import com.compose.ez.ui.api.FontStyle
+import com.compose.ez.ui.api.Length
+import com.compose.ez.ui.api.Padding
+import com.compose.ez.ui.api.TextSpan
+import kotlin.collections.List
 
 /**
  * author: wulinpeng

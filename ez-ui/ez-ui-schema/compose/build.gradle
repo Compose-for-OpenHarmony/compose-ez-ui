@@ -29,5 +29,5 @@ kotlin {
 
 redwoodSchema {
   source = project(":ez-ui-schema")
-  type = 'com.redwood.ui.schema.Schema'
+  type = 'com.compose.ez.ui.Schema'
 }

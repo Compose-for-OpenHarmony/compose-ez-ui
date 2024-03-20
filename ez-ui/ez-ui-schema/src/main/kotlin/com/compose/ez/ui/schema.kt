@@ -1,4 +1,4 @@
-package com.redwood.ui.schema
+package com.compose.ez.ui
 
 import app.cash.redwood.schema.Schema
 

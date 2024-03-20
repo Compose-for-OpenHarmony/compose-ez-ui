@@ -1,11 +1,11 @@
 package harmony
 
-import com.redwood.ui.schema.widget.Button
-import com.redwood.ui.schema.widget.Column
-import com.redwood.ui.schema.widget.Image
-import com.redwood.ui.schema.widget.Row
-import com.redwood.ui.schema.widget.SchemaWidgetFactory
-import com.redwood.ui.schema.widget.Text
+import com.compose.ez.ui.widget.Button
+import com.compose.ez.ui.widget.Column
+import com.compose.ez.ui.widget.Image
+import com.compose.ez.ui.widget.Row
+import com.compose.ez.ui.widget.SchemaWidgetFactory
+import com.compose.ez.ui.widget.Text
 import harmony.dom.BaseNode
 
 /**
