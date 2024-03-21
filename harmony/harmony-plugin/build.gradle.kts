@@ -4,7 +4,7 @@ plugins {
   id("com.gradle.plugin-publish") version "1.2.1"
 }
 
-group = "com.compose.ez.ui"
+group = "io.github.XDMrWu"
 version = "1.0.0"
 
 publishing {
@@ -21,7 +21,7 @@ gradlePlugin {
   vcsUrl = "https://github.com/Compose-for-OpenHarmony/compose-ez-ui.git"
   plugins {
     create("HarmonyJSPlugin") {
-      id = "com.compose.ez.ui.harmony.js"
+      id = "io.github.XDMrWu.harmony.js"
       displayName = "Plugin for package Kotlin/js for Harmony"
       description = "A plugin that helps you package Kotlin/js code for Harmony"
       tags = listOf("HarmonyOS", "OpenHarmony", "Kotlin/js", "Compose")

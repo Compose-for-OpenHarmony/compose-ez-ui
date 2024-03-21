@@ -2,7 +2,7 @@ plugins {
   id("org.jetbrains.kotlin.multiplatform")
   id("app.cash.redwood")
   id("kotlinx-serialization")
-  id("com.compose.ez.ui.harmony.js")
+  id("io.github.XDMrWu.harmony.js")
 }
 
 kotlin {

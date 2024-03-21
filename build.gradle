@@ -3,7 +3,7 @@ buildscript {
     classpath "app.cash.redwood:redwood-gradle-plugin:0.7.0"
     classpath libs.kotlin.gradlePlugin
     classpath libs.kotlin.serializationPlugin
-    classpath "com.compose.ez.ui:harmony-plugin:1.0.0"
+    classpath "io.github.XDMrWu:harmony-plugin:1.0.0"
   }
   repositories {
     mavenCentral()
