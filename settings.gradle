@@ -38,8 +38,8 @@ project(':harmony-plugin').projectDir = new File(rootDir, "harmony/harmony-plugi
 include ':ez-ui-harmony'
 project(':ez-ui-harmony').projectDir = new File(rootDir, "harmony/ez-ui-harmony")
 
-include ':redwood-harmony'
-project(':redwood-harmony').projectDir = new File(rootDir, "harmony/redwood-harmony")
+//include ':redwood-harmony'
+//project(':redwood-harmony').projectDir = new File(rootDir, "harmony/redwood-harmony")
 
 include ':sample-counter'
 project(':sample-counter').projectDir = new File(rootDir, "samples/counter")

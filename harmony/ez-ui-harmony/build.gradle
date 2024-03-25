@@ -1,4 +1,5 @@
 apply plugin: 'org.jetbrains.kotlin.multiplatform'
+apply plugin: 'app.cash.redwood'
 
 kotlin {
   js {
@@ -16,6 +17,7 @@ kotlin {
         api project(":ez-ui-schema:widget")
         api project(":ez-ui-schema:modifier")
         api project(":harmony-dom")
+        implementation libs.kotlinx.coroutines.core
       }
     }
   }

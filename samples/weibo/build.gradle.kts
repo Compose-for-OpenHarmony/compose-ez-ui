@@ -23,7 +23,7 @@ kotlin {
     }
     jsMain {
       dependencies {
-        implementation(project(":redwood-harmony"))
+        implementation(project(":ez-ui-harmony"))
       }
     }
   }
