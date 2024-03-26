@@ -43,3 +43,4 @@ public open external class ImageNode: BaseNode {
 public open external class ColumnNode: BaseNodeGroup
 
 public open external class RowNode: BaseNodeGroup
+public open external class ListNode: BaseNodeGroup

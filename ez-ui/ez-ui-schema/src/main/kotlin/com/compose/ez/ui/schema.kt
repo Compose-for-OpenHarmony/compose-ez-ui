@@ -12,6 +12,7 @@ import app.cash.redwood.schema.Schema
     // layout
     Column::class,
     Row::class,
+    List::class,
     // ui
     Text::class,
     Button::class,

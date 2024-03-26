@@ -38,11 +38,14 @@ project(':harmony-plugin').projectDir = new File(rootDir, "harmony/harmony-plugi
 include ':ez-ui-harmony'
 project(':ez-ui-harmony').projectDir = new File(rootDir, "harmony/ez-ui-harmony")
 
-//include ':redwood-harmony'
-//project(':redwood-harmony').projectDir = new File(rootDir, "harmony/redwood-harmony")
+include ':ez-ui-android'
+project(':ez-ui-android').projectDir = new File(rootDir, "android/ez-ui-android")
 
 include ':sample-counter'
 project(':sample-counter').projectDir = new File(rootDir, "samples/counter")
 
 include ':sample-weibo'
 project(':sample-weibo').projectDir = new File(rootDir, "samples/weibo")
+include ':sample-weibo:android'
+include ':sample-weibo:harmony'
+include ':sample-weibo:ui'

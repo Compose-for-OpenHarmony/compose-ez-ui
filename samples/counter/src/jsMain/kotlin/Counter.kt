@@ -1,4 +1,4 @@
-import harmony.CreateHarmonyNode
+import harmony.builder.CreateHarmonyNode
 import harmony.dom.BaseNode
 
 /**
