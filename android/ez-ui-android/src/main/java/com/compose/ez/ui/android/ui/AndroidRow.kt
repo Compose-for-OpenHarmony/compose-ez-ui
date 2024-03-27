@@ -35,9 +35,7 @@ class AndroidRow(private val context: Context): Row<View>, ChangeListener {
     innerView.setPaddingLength(padding)
   }
 
-  override var modifier: Modifier
-    get() = Modifier
-    set(value) {}
+  override var modifier: Modifier = Modifier
   override val value = innerView
   override fun onEndChanges() {
     (children as AndroidChildren).widgetList.forEach {

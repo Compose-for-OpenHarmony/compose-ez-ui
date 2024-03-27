@@ -8,6 +8,7 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import app.cash.redwood.Modifier
@@ -72,6 +73,14 @@ class AndroidText(private val context: Context): Text<View> {
     triggerTextRender()
   }
 
+  override fun textCenter(textCenter: Boolean) {
+    if (textCenter) {
+      innerView.gravity = Gravity.CENTER
+    } else {
+      innerView.gravity = Gravity.START
+    }
+  }
+
   private fun triggerTextRender() {
     text ?: return
     if (spans.isNullOrEmpty()) {
@@ -85,8 +94,6 @@ class AndroidText(private val context: Context): Text<View> {
     innerView.text = content
   }
 
-  override var modifier: Modifier
-    get() = Modifier
-    set(value) {}
+  override var modifier: Modifier = Modifier
   override val value: View= innerView
 }

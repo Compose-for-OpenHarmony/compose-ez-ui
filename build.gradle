@@ -17,12 +17,6 @@ buildscript {
 }
 
 allprojects {
-//    plugins {
-//
-//        id 'com.android.library'
-//        id 'org.jetbrains.kotlin.android'
-//    }
-
     // TODO remove after update to redwood 0.8.0
   plugins.withId('app.cash.redwood') {
     extensions.getByName("redwood").kotlinCompilerPlugin.set("1.5.4")

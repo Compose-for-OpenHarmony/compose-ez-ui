@@ -17,6 +17,7 @@ import app.cash.redwood.schema.Schema
     Text::class,
     Button::class,
     Image::class,
+    Divider::class,
     // modifiers
     Weight::class,
   ],

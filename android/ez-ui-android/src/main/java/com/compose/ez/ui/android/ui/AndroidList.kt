@@ -41,8 +41,6 @@ class AndroidList(private val context: Context): List<View> {
     innerView.setPaddingLength(padding)
   }
 
-  override var modifier: Modifier
-    get() = Modifier
-    set(value) {}
+  override var modifier: Modifier = Modifier
   override val value: View = innerView
 }

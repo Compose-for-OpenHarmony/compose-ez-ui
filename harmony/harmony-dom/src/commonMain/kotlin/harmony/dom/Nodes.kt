@@ -28,6 +28,8 @@ public open external class TextNode: BaseNode {
   public fun setMaxLines(maxLines: Number)
 
   public fun setSpans(span: Array<OhTextSpan>)
+
+  public fun setTextCenter(center: Boolean)
 }
 
 public open external class ButtonNode: BaseNode {
@@ -38,6 +40,10 @@ public open external class ButtonNode: BaseNode {
 public open external class ImageNode: BaseNode {
   public fun setUrl(url: String)
   public fun setIsCircle(isCircle: Boolean)
+}
+
+public open external class DividerNode: BaseNode {
+  public fun setBackgroundColor(color: String)
 }
 
 public open external class ColumnNode: BaseNodeGroup

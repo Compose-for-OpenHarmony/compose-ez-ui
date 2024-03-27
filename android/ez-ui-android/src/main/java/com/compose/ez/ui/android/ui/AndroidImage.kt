@@ -74,8 +74,6 @@ class AndroidImage(private val context: Context): Image<View> {
       .into(innerView)
   }
 
-  override var modifier: Modifier
-    get() = Modifier
-    set(value) {}
+  override var modifier: Modifier = Modifier
   override val value: View= innerView
 }

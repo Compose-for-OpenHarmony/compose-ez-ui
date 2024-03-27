@@ -14,14 +14,11 @@ import kotlin.collections.List
 
 /**
  * author: wulinpeng
- * date: 2024/1/28
+ * date: 2024/3/27
  * desc:
  */
-@Widget(2)
-data class Text(
-  @Property(1)
-  val text: String?,
-
+@Widget(7)
+data class Divider(
   @Property(2)
   @Default("Length.Wrap")
   val width: Length,
@@ -30,31 +27,7 @@ data class Text(
   @Default("Length.Wrap")
   val height: Length,
 
-  @Property(4)
-  @Default("Padding.Zero")
-  val padding: Padding,
-
-  @Property(5)
-  @Default("null")
-  val fontStyle: FontStyle? = null,
-
-  @Property(6)
-  @Default("Dp(15.0)")
-  val fontSize: Dp = 15.dp,
-
-  @Property(7)
-  @Default("Color.Black")
-  val fontColor: Color = Color.Black,
-
-  @Property(8)
-  @Default("null")
-  val maxLines: Int? = null,
-
-  @Property(9)
-  @Default("null")
-  val spans: List<TextSpan>? = null,
-
   @Property(10)
-  @Default("false")
-  val textCenter: Boolean = false,
+  @Default("Color.White")
+  val background: Color
 )

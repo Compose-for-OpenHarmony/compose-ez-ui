@@ -11,6 +11,7 @@ open class Color(val value: String) {
   object Brown: Color("#a52a2a")
   object Gray: Color("#808080")
   object Grey: Color("#808080")
+  object LightGrey: Color("#dcdcdc")
   object Green: Color("#008000")
   object Orange: Color("#ffa500")
   object Pink: Color("#ffc0cb")

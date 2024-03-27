@@ -2,6 +2,7 @@ package harmony.builder
 
 import com.compose.ez.ui.widget.Button
 import com.compose.ez.ui.widget.Column
+import com.compose.ez.ui.widget.Divider
 import com.compose.ez.ui.widget.Image
 import com.compose.ez.ui.widget.List
 import com.compose.ez.ui.widget.Row
@@ -10,6 +11,7 @@ import com.compose.ez.ui.widget.Text
 import harmony.dom.BaseNode
 import harmony.ui.HarmonyButton
 import harmony.ui.HarmonyColumn
+import harmony.ui.HarmonyDivider
 import harmony.ui.HarmonyImage
 import harmony.ui.HarmonyList
 import harmony.ui.HarmonyRow
@@ -43,5 +45,9 @@ public class HarmonyWidgetFactory: SchemaWidgetFactory<BaseNode> {
 
   override fun Image(): Image<BaseNode> {
     return HarmonyImage()
+  }
+
+  override fun Divider(): Divider<BaseNode> {
+    return HarmonyDivider()
   }
 }

@@ -7,6 +7,7 @@ import com.compose.ez.ui.api.Color
 import com.compose.ez.ui.api.Length
 import com.compose.ez.ui.api.Padding
 import com.compose.ez.ui.compose.Column
+import com.compose.ez.ui.compose.Divider
 import com.compose.ez.ui.compose.Image
 import com.compose.ez.ui.compose.Row
 import com.compose.ez.ui.compose.Text
@@ -33,5 +34,11 @@ fun WeiboCard(weiboModel: WeiboModel) {
     Text(weiboModel.text, maxLines = 5, padding = Padding(start = 10.dp, end = 10.dp), spans = weiboModel.createTextSpans())
     // TODO Grid
     Image(weiboModel.pics.split(",").first(), Length(200.dp), Length(200.dp), padding = Padding(10.dp, 10.dp, 10.dp, 10.dp))
+    Row(width = Length.Fill, padding = Padding(bottom = 5.dp)) {
+      Text("转发 ${weiboModel.reposts_count}", fontSize = 15.dp, fontColor = Color.Grey, textCenter = true, modifier = Modifier.weight(1f))
+      Text("评论 ${weiboModel.comments_count}", fontSize = 15.dp, fontColor = Color.Grey, textCenter = true, modifier = Modifier.weight(1f))
+      Text("点赞 ${weiboModel.attitudes_count}", fontSize = 15.dp, fontColor = Color.Grey, textCenter = true, modifier = Modifier.weight(1f))
+    }
+    Divider(Length.Fill, Length(5.dp), Color.LightGrey)
   }
 }

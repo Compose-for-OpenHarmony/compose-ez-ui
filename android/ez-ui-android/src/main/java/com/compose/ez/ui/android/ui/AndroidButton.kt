@@ -51,8 +51,6 @@ class AndroidButton(private val context: Context): Button<View> {
     }
   }
 
-  override var modifier: Modifier
-    get() = Modifier
-    set(value) {}
+  override var modifier: Modifier = Modifier
   override val value: View= innerView
 }

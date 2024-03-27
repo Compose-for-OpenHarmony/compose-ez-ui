@@ -13,6 +13,7 @@ class AndroidChildren(val parentView: ViewGroup, val onModifierUpdate: () -> Uni
 
   public val widgetList: MutableList<Widget<View>> = mutableListOf<Widget<View>>()
   override fun insert(index: Int, widget: Widget<View>) {
+    widgetList.add(index, widget)
     parentView.addView(widget.value, index, widget.value.layoutParams)
   }
 
@@ -21,6 +22,9 @@ class AndroidChildren(val parentView: ViewGroup, val onModifierUpdate: () -> Uni
   }
 
   override fun remove(index: Int, count: Int) {
+    repeat(count) {
+      widgetList.removeAt(index)
+    }
     parentView.removeViews(index, count)
   }
 

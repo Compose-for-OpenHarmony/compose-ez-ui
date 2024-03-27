@@ -74,6 +74,10 @@ public class HarmonyText: Text<BaseNode> {
     }?.toTypedArray() ?: emptyArray())
   }
 
+  override fun textCenter(textCenter: Boolean) {
+    innerNode.setTextCenter(textCenter)
+  }
+
   override val value: BaseNode
     get() = innerNode
   override var modifier: Modifier = Modifier

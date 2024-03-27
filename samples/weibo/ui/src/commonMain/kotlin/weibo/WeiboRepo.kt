@@ -38,6 +38,9 @@ data class WeiboModel(
   val created_at: String,
   val pics: String,
   val topics: String,
+  val attitudes_count: Int,
+  val comments_count: Int,
+  val reposts_count: Int
 )
 
 fun WeiboModel.createTextSpans(): List<TextSpan>? {
