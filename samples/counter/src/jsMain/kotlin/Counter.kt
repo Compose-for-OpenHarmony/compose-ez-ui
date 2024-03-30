@@ -1,4 +1,4 @@
-import harmony.builder.CreateHarmonyNode
+import harmony.builder.ezUINode
 import harmony.dom.BaseNode
 
 /**
@@ -10,7 +10,7 @@ import harmony.dom.BaseNode
 @OptIn(ExperimentalJsExport::class)
 class CounterDemo {
   fun createCounterNode(): BaseNode {
-    return CreateHarmonyNode().createNode {
+    return ezUINode {
       Counter(0)
     }
   }
