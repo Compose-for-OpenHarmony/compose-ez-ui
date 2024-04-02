@@ -4,6 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 
 /**
@@ -19,6 +20,7 @@ class WeiboVM {
 
   suspend fun fetchWeiboList() {
     isLoading = true
+    delay(1000)
     val response = json.decodeFromString<WeiboResponse>(WeiboRepo.fakeData)
     response.weibo.forEach {
       it.user_name = response.user.screen_name

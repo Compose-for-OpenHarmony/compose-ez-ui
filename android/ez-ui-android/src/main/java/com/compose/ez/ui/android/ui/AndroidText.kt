@@ -89,7 +89,7 @@ class AndroidText(private val context: Context): Text<View> {
     }
     val content = SpannableString(text)
     spans?.forEach {
-      content.setSpan(ForegroundColorSpan(android.graphics.Color.parseColor(it.fontColor.value)), it.startIndex, it.endIndex, Spanned.SPAN_INCLUSIVE_INCLUSIVE)
+      content.setSpan(ForegroundColorSpan(android.graphics.Color.parseColor(it.fontColor.value)), it.startIndex, it.endIndex + 1, Spanned.SPAN_INCLUSIVE_INCLUSIVE)
     }
     innerView.text = content
   }
